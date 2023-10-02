@@ -3,12 +3,10 @@ from django.core.exceptions import ValidationError
 from .models import *
 
 class AddSolutionForm(forms.ModelForm):
-    # def __init__(self, *args, **kwargs):
-    #     super().__init__(*args, **kwargs)
-    #     self.fields['solution'].empty_label = "пусто"
-    #     self.fields['org_referal'].empty_label = "пусто"
-    #     self.fields['woman_pasport_type'].empty_label = "пусто"
-    #     self.fields['man_pasport_type'].empty_label = "пусто"
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['man'].empty_label = "не указан"
+        self.fields['woman'].empty_label = "не указана"
 
     class Meta:
         model = Solution
@@ -23,31 +21,6 @@ class AddSolutionForm(forms.ModelForm):
             'commission_members',
             'man',
             'woman',
-            # 'woman_surname',
-            # 'woman_name',
-            # 'woman_dad_name',
-            # 'woman_birth_date',
-            # 'woman_birth_place',
-            # 'woman_location',
-            # 'woman_pasport_type',
-            # 'woman_pasport_serial',
-            # 'woman_pasport_number',
-            # 'woman_date_issue',
-            # 'woman_issuing_authority',
-            # 'woman_who_issued',
-            # 'man_surname',
-            # 'man_name',
-            # 'man_dad_name',
-            # 'man_birth_date',
-            # 'man_birth_place',
-            # 'man_location',
-            # 'man_pasport_type',
-            # 'man_pasport_serial',
-            # 'man_pasport_number',
-            # 'man_date_issue',
-            # 'man_issuing_authority',
-            # 'man_who_issued',
-            # 'marriage_reg_mark',
         ]
         widgets = {
             'number': forms.NumberInput(attrs={'class': 'form-input'}),
@@ -60,31 +33,6 @@ class AddSolutionForm(forms.ModelForm):
             'commission_members': forms.Textarea(attrs={'class': 'form-input'}),
             'man': forms.Select(attrs={'class': 'form-input'}),
             'woman': forms.Select(attrs={'class': 'form-input'}),
-            # 'woman_surname': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'woman_name': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'woman_dad_name': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'woman_birth_date': forms.DateInput(attrs={'class': 'form-input', 'type': 'date'}),
-            # 'woman_birth_place': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'woman_location': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'woman_pasport_type': forms.Select(attrs={'class': 'form-input'}),
-            # 'woman_pasport_serial': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'woman_pasport_number': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'woman_date_issue': forms.DateInput(attrs={'class': 'form-input', 'type': 'date'}),
-            # 'woman_issuing_authority': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'woman_who_issued': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'man_surname': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'man_name': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'man_dad_name': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'man_birth_date': forms.DateInput(attrs={'class': 'form-input', 'type': 'date'}),
-            # 'man_birth_place': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'man_location': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'man_pasport_type': forms.Select(attrs={'class': 'form-input'}),
-            # 'man_pasport_serial': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'man_pasport_number': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'man_date_issue': forms.DateInput(attrs={'class': 'form-input', 'type': 'date'}),
-            # 'man_issuing_authority': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'man_who_issued': forms.TextInput(attrs={'class': 'form-input'}),
-            # 'marriage_reg_mark': forms.TextInput(attrs={'class': 'form-input'}),
         }
 
     # def clean_title(self):

@@ -1,0 +1,37 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Главная</title>
+</head>
+<body>
+    <nav class="nav-panel">
+        <div class="logo">
+            <a href="/">
+                <img src="{% static 'img/logo.png' %}">
+            </a>
+        </div>
+        <div class="buttons">
+            <div class="button-lnk">
+                <a href="/addwoman" class="woman">Супруга</a>
+            </div>
+            <div class="button-lnk">
+                <a href="/addman" class="man">Супруг</a>
+            </div>
+            <div class="button-lnk">
+                <a href="/addsolution" class="solution">Решение</a>
+            </div>
+        </div>
+        <div class="aith">
+            <a href="#">Логин</a>
+            |
+            <<a href="#">Выйти</a>
+        </div>
+    </nav>
+</body>
+</html>

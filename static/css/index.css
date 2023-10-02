@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    background: #aaaaaa;
+}
+.nav-panel {
+    background: #333333;
+    display: grid;
+    grid-template: 70px / 70px 5fr 1fr
+}
+.nav-panel .logo {
+
+}
+.nav-panel .logo img {
+    width: 70px;
+    height: 70px;
+}
+.nav-panel .buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.nav-panel .buttons .button-lnk {
+    margin: 20px;
+}
+.nav-panel .buttons .button-lnk a {
+    font-family: Arial;
+    text-decoration: none;
+}
+.nav-panel .buttons .button-lnk .woman {
+    color: plum;
+}
+.nav-panel .buttons .button-lnk .woman:hover {
+    color: #eeeeee;
+    text-shadow: 0 0 10px plum;
+}
+.nav-panel .buttons .button-lnk .man {
+    color: #5897fb;
+}
+.nav-panel .buttons .button-lnk .man:hover {
+    color: #eeeeee;
+    text-shadow: 0 0 10px #5897fb;
+}
+.nav-panel .buttons .button-lnk .solution {
+    color: chocolate;
+}
+.nav-panel .buttons .button-lnk .solution:hover {
+    color: #eeeeee;
+    text-shadow: 0 0 10px chocolate;
+}
